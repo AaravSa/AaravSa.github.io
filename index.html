@@ -1,3 +1,5 @@
+<!-- No AI was used to create the code of this website. -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +9,7 @@
                                    initial-scale=1.0">
     <title>Aarav Sahoo</title>
     <style>
-        body {
+        .alerting {
             display: flex;
             justify-content: center;
             width: 100vw;
@@ -29,18 +31,24 @@
 </head>
 
 <body>
+    <h1>Aarav Sahoo</h1>
+    
+    <p>Welcome to my website!</p>
+    <div class="alerting">
+        <button onclick="showAlert()">Show Alert</button>
 
-    <button onclick="showAlert()">Show Alert</button>
-
-    <script>
-        function showAlert() {
-            const alertBox = document.createElement('div');
-            alertBox.className = 'alert';
-            alertBox.textContent = 'This is a custom alert box.';
-            document.body.appendChild(alertBox);
-        }
-    </script>
-
+        <script>
+            function showAlert() {
+                const alertBox = document.createElement('div');
+                alertBox.className = 'alert';
+                alertBox.textContent = 'This is a custom alert box.';
+                document.body.appendChild(alertBox);
+                setTimeout(() => {
+                    alertBox.remove();
+                }, 3000);
+            }
+        </script>
+    </div>
 </body>
 
 </html>
